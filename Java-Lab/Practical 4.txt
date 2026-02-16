@@ -1,0 +1,72 @@
+Aim:
+Theory:
+
+/*
+// Base class
+class Shape {
+    void area() {
+        System.out.println("Area not defined");
+    }
+}
+
+// Child class 1
+class Circle extends Shape {
+    double radius = 5;
+
+    // Method overriding (Runtime polymorphism)
+    void area() {
+        double a = 3.14 * radius * radius;
+        System.out.println("Area of Circle = " + a);
+    }
+}
+
+// Child class 2
+class Rectangle extends Shape {
+    double length = 4;
+    double width = 6;
+
+    // Method overriding (Runtime polymorphism)
+    void area() {
+        double a = length * width;
+        System.out.println("Area of Rectangle = " + a);
+    }
+}
+
+// Class to show Method Overloading (Compile-time polymorphism)
+class Calculator {
+
+    // Area of circle
+    void area(double r) {
+        System.out.println("Area using overloaded method (Circle) = " + (3.14 * r * r));
+    }
+
+    // Area of rectangle
+    void area(double l, double w) {
+        System.out.println("Area using overloaded method (Rectangle) = " + (l * w));
+    }
+}
+
+// Main class
+public class Calculate {
+    public static void main(String[] args) {
+
+        // Compile-time polymorphism (Overloading)
+        Calculator c = new Calculator();
+        c.area(5);        // calls circle area
+        c.area(4, 6);     // calls rectangle area
+
+        // Runtime polymorphism (Overriding)
+        Shape s;
+
+        s = new Circle();     // parent reference, child object
+        s.area();
+
+        s = new Rectangle();
+        s.area();
+    }
+}
+Viva Q:
+Conclusion:
+
+
+*/
