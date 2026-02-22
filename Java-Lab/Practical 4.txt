@@ -1,5 +1,41 @@
-Aim:
-Theory:
+Aim:To study and implement Polymorphism in Java using Method Overloading (Compile-time Polymorphism) and Method Overriding (Runtime Polymorphism).
+
+Theory
+
+Polymorphism is one of the fundamental concepts of Object-Oriented Programming (OOP).
+The word polymorphism means “many forms.” It allows a single function or method to perform different tasks depending on the situation.
+
+Java supports polymorphism in two ways:
+
+1. Compile-Time Polymorphism (Method Overloading)
+
+It occurs when multiple methods have the same name but different parameters within the same class.
+
+✅ Decision taken at compile time
+✅ Achieved using method overloading
+
+Example:
+
+void area(double r)
+void area(double l, double w)
+
+Both methods have the same name but different parameter lists.
+
+2. Runtime Polymorphism (Method Overriding)
+
+It occurs when a child class provides its own implementation of a method already defined in the parent class.
+
+✅ Decision taken at runtime
+✅ Achieved using inheritance + method overriding
+
+Here, a parent class reference refers to child class objects, enabling dynamic method calling.
+
+Example:
+
+Shape s = new Circle();
+s.area();
+
+The method executed depends on the object type, not reference type.
 
 /*
 -----------------------------------------Code---------------------------------------------------------
@@ -67,8 +103,52 @@ public class Calculate {
     }
 }
 ------------------------------------------------------------------------------------------------------------------------------
-Viva Q:
-Conclusion:
+Output
+Area using overloaded method (Circle) = 78.5
+Area using overloaded method (Rectangle) = 24.0
+Area of Circle = 78.5
+Area of Rectangle = 24.0
+Viva Questions & Answers
+1. What is Polymorphism?
+
+Polymorphism is the ability of a method or object to take many forms.
+
+2. Types of Polymorphism in Java
+
+Compile-time polymorphism
+
+Runtime polymorphism
+
+3. What is Method Overloading?
+
+Defining multiple methods with the same name but different parameters in the same class.
+
+4. What is Method Overriding?
+
+Redefining a parent class method in a child class with the same method signature.
+
+5. Difference between Overloading and Overriding
+Feature	Overloading	Overriding
+Time	Compile Time	Runtime
+Inheritance	Not required	Required
+Method Name	Same	Same
+Parameters	Different	Same
+Class	Same class	Parent & Child
+6. What is Runtime Polymorphism also called?
+Dynamic Method Dispatch.
+
+7. Why is Polymorphism important?
+It increases flexibility, reusability, and scalability of programs.
+
+8. What is a Parent Reference?
+A reference variable of parent class referring to child class object.
+
+Example:
+Shape s = new Circle();
+
+Conclusion
+
+Thus, the program successfully demonstrated polymorphism in Java using both method overloading and method overriding. Compile-time polymorphism was achieved through overloaded methods in the Calculator class, while runtime polymorphism was implemented using inheritance and overridden methods in Circle and Rectangle classes. This concept improves code reusability, flexibility, and dynamic behavior in object-oriented programming.
 
 
 */
