@@ -1,1 +1,241 @@
 
+🎯 Aim: Program to implement of Abstract Class and Interface concepts in Java using inheritance and method implementation.
+
+🎯 Objective:
+Understand abstraction in Object-Oriented Programming.
+
+Learn how abstract classes define common behavior.
+
+Understand interfaces as capability providers.
+
+Implement inheritance using extends.
+
+Implement interfaces using implements.
+
+Demonstrate method overriding and abstraction.
+
+📘 Theory:
+🔹 Abstraction
+
+Abstraction is the process of hiding implementation details and showing only essential functionality to the user.
+
+Java achieves abstraction using:
+
+Abstract Classes
+
+Interfaces
+
+🔹 Abstract Class
+
+An abstract class:
+
+Is declared using the abstract keyword.
+
+Cannot be instantiated directly.
+
+Can contain both:
+
+Abstract methods (without body)
+
+Concrete methods (with body)
+
+It represents what an object is.
+
+Example:
+
+A Car is a Vehicle.
+
+🔹 Interface
+
+An interface:
+
+Contains abstract methods by default.
+
+Provides full abstraction.
+
+Supports multiple inheritance.
+
+It represents what an object can do.
+
+Example:
+
+A Car can use GPS.
+
+🧩 Concept Relationship
+Vehicle (Abstract Class)
+        ↑
+       Car
+        ↓
+       GPS (Interface)
+
+Vehicle → defines base behavior
+
+GPS → adds additional capability
+
+Car → combines both
+
+⚙️ Technologies / Concepts Used
+
+Java Programming Language
+
+Object-Oriented Programming (OOP)
+
+Abstraction
+
+Inheritance
+
+Interfaces
+
+Method Overriding
+
+Runtime Polymorphism
+
+🌍 Applications
+
+This concept is widely used in:
+
+Vehicle Management Systems
+
+Payment Gateways
+
+Banking Software
+
+Game Development
+
+Enterprise Applications
+
+Android Development APIs
+
+💡 Real-World Uses
+Scenario	Abstract Class	Interface
+Vehicle System	Vehicle	GPS
+Banking	Account	OnlinePayment
+Smart Devices	Device	WiFi/Bluetooth
+Apps	Base Activity	Click Listener
+--------------------------------------------------------------💻 Program Code----------------------------------------------------------------------------------------------
+📄 File: Main.java
+// Abstract Class
+abstract class Vehicle {
+
+    // Abstract method
+    abstract void start();
+
+    // Normal method
+    void fuelType() {
+        System.out.println("Fuel Type: Petrol/Diesel");
+    }
+}
+
+// Interface
+interface GPS {
+    void location();
+}
+
+// Car class
+class Car extends Vehicle implements GPS {
+
+    // Implementation of abstract method
+    void start() {
+        System.out.println("Car Engine Started");
+    }
+
+    // Implementation of interface method
+    public void location() {
+        System.out.println("Current Location Displayed using GPS");
+    }
+}
+
+// Main class
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Step 1: Create object of Car
+        Car c = new Car();
+
+        // Step 2: Call abstract class method
+        c.start();
+
+        // Step 3: Call normal method
+        c.fuelType();
+
+        // Step 4: Call interface method
+        c.location();
+    }
+}
+▶️ Output
+Car Started Successfully
+Fuel Type : Petrol
+GPS Active - Location Tracked
+🧠 Key Learning Outcomes
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+After completing this practical:
+
+✅ Understood abstraction implementation
+✅ Learned difference between abstract class and interface
+✅ Implemented inheritance and interface together
+✅ Practiced method overriding
+✅ Understood real-world object modeling
+
+⚡ Important Concepts Revised
+
+Abstract methods must be implemented by child classes.
+
+Interfaces allow multiple inheritance.
+
+A class can extend one abstract class but implement multiple interfaces.
+
+Abstract classes define identity.
+
+Interfaces define abilities.
+
+🔍 Abstract Class vs Interface (Quick Revision)
+Feature	Abstract Class	Interface
+Keyword	abstract	interface
+Methods	Abstract + Normal	Abstract
+Constructors	Allowed	Not Allowed
+Inheritance	Single	Multiple
+Usage	Base Structure	Capability
+🚀 Why This Practical Matters
+
+This experiment demonstrates one of the core pillars of scalable software design.
+
+Modern frameworks like:
+
+Spring Boot
+
+Android SDK
+
+Java Collections
+
+Game Engines
+
+heavily depend on abstraction and interfaces.
+
+Understanding this concept builds the foundation for:
+
+Clean Architecture
+
+Design Patterns
+
+Enterprise Software Development
+
+🧩 Possible Enhancements (Future Work)
+
+Add multiple vehicle types.
+
+Implement multiple interfaces.
+
+Apply runtime polymorphism using parent reference.
+
+Create UML diagrams.
+
+Extend into a Vehicle Management System.
+
+✅ Conclusion
+
+The practical successfully demonstrated how Java achieves abstraction using abstract classes and interfaces. The Car class inherited common vehicle behavior while implementing GPS functionality, illustrating real-world object modeling and reusable software design principles.
+
+⭐ Portfolio Note:
+This project reflects understanding of core Object-Oriented Programming principles essential for scalable and maintainable software systems.
